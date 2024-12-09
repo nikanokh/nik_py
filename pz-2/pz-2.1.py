@@ -4,15 +4,19 @@
 во сколько раз шоколадные конфеты дороже ирисок.
 """
 
-x = 1
+x = 3
 a = 120
 y = 1
 b = 75
+try:
+    price_ch_candy = a/x
+    price_toffee = b/y
+    coefficient_diff = price_ch_candy/price_toffee
 
-price_ch_candy = a/x
-price_toffee = b/y
-coeff_diff = price_ch_candy/price_toffee
+    print(f'1 кг шоколадных конфет стоит: {price_ch_candy} руб.')
+    print(f'1 кг ирисок стоит: {price_toffee} руб.')
+    print(f'Шоколадные конфеты дороже ирисок в {round(coefficient_diff, 4)} раз')
+except ZeroDivisionError:
+    print('Количество не может быть нулевым')
 
-print(f'1 кг шоколадных конфет стоит: {price_ch_candy} руб.')
-print(f'1 кг ирисок стоит: {price_toffee} руб.')
-print(f'Шоколадные конфеты дороже ирисок в {coeff_diff} раз')
+
