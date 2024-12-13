@@ -9,7 +9,6 @@ N = int(input("Введите целое число N (>0)"))
 c = 0
 while True:
     digit = N % 10**(c+1) // 10**c
-    print(digit)
     if digit == 0:
         print(False)
         break
