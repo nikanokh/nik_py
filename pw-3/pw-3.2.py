@@ -5,17 +5,21 @@
 150000 р. до 200000 р. процент составит 7%. Составить программу, определяющую
 процентной ставки в зависимости от вносимой суммы.
 """
+while True:
+    deposit = float(input("Введите сумму вклада: "))
+    try:
+        if deposit < 50000:
+            rate = 0.04
+        elif deposit < 100000:
+            rate = 0.05
+        elif deposit < 150000:
+            rate = 0.06
+        elif deposit < 200000:
+            rate = 0.07
+        else:
+            rate = None
 
-deposit = float(input("Введите сумму вклада: "))
-if deposit < 50000:
-    rate = 0.04
-elif deposit < 100000:
-    rate = 0.05
-elif deposit < 150000:
-    rate = 0.06
-elif deposit < 200000:
-    rate = 0.07
-else:
-    rate = None
+        print(f"Процентная ставка: {rate * 100}%" if rate is not None else "Не корректная сумма.")
 
-print(f"Процентная ставка: {rate * 100}%" if rate is not None else "Сумма превышает лимит.")
+    except ValueError:
+        print('Введите корректную сумму')

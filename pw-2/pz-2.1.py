@@ -4,19 +4,21 @@
 во сколько раз шоколадные конфеты дороже ирисок.
 """
 
-x = 3
-a = 120
-y = 1
-b = 75
-try:
-    price_ch_candy = a/x
-    price_toffee = b/y
-    coefficient_diff = price_ch_candy/price_toffee
+x = input('Введите число X: ')
+a = input('Введите число A: ')
+y = input('Введите число Y: ')
+b = input('Введите число B: ')
+while True:
+    try:
+        price_ch_candy = a/x
+        price_toffee = b/y
+        coefficient_diff = price_ch_candy/price_toffee
 
-    print(f'1 кг шоколадных конфет стоит: {price_ch_candy} руб.')
-    print(f'1 кг ирисок стоит: {price_toffee} руб.')
-    print(f'Шоколадные конфеты дороже ирисок в {round(coefficient_diff, 4)} раз')
-except ZeroDivisionError:
-    print('Количество не может быть нулевым')
-
+        print(f'1 кг шоколадных конфет стоит: {price_ch_candy} руб.')
+        print(f'1 кг ирисок стоит: {price_toffee} руб.')
+        print(f'Шоколадные конфеты дороже ирисок в {round(coefficient_diff, 4)} раз')
+    except ZeroDivisionError:
+        print('Количество не может быть нулевым')
+    except TypeError:
+        print('Вводите числа')
 

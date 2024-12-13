@@ -4,17 +4,19 @@
 то вывести TRUE, если нет — вывести FALSE.
 """
 
-
-N = int(input("Введите целое число N (>0)"))
-c = 0
-while True:
-    digit = N % 10**(c+1) // 10**c
-    if digit == 0:
-        print(False)
-        break
-    else:
-        if digit % 2 == 1:
-            print(True)
+try:
+    N = int(input("Введите целое число N (>0)"))
+    c = 0
+    while True:
+        digit = N % 10**(c+1) // 10**c
+        if digit == 0:
+            print(False)
             break
         else:
-            c += 1
+            if digit % 2 == 1:
+                print(True)
+                break
+            else:
+                c += 1
+except ValueError:
+    print('Вводите целое число')
