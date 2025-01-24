@@ -6,8 +6,7 @@ import random
 
 
 def print_rnd_sym():
-    random.random()
-    [print(int(random.uniform(0, 10)) // 1, end='') for _ in range(0, 40)]
+    [print(chr(int(random.uniform(1, 8000)) // 1), end='') for _ in range(0, 40)]
 
 
 print_rnd_sym()

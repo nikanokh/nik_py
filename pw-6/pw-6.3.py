@@ -25,5 +25,3 @@ while True:
         print()
     except ValueError:
         print("Вводите целые числа")
-
-

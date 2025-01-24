@@ -4,12 +4,12 @@
 во сколько раз шоколадные конфеты дороже ирисок.
 """
 
-x = input('Введите число X: ')
-a = input('Введите число A: ')
-y = input('Введите число Y: ')
-b = input('Введите число B: ')
 while True:
     try:
+        x = float(input('Введите число X: '))
+        a = float(input('Введите число A: '))
+        y = float(input('Введите число Y: '))
+        b = float(input('Введите число B: '))
         price_ch_candy = a/x
         price_toffee = b/y
         coefficient_diff = price_ch_candy/price_toffee
