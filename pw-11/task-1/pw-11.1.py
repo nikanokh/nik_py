@@ -14,7 +14,7 @@ import random
 file = open('info.txt', 'w')
 data_str = ''
 for i in range(20):
-    data_str += str(random.randint(-10, 10)) + ' '
+    data_str += str(random.randint(-100, 100)) + ' '
 file.write(data_str)
 file.close()
 
@@ -23,14 +23,15 @@ file = open('info.txt')
 data = file.readline()
 
 data_str = list(data.split())
+data_int = [int(i) for i in data_str]
 
-data_len = len(data_str)
-data_max = max(data_str)
+data_len = len(data_int)
+data_max = max(data_int)
 
 product = 1
-for i in data_str[:int(data_len/2)]:
-    if int(i) < 0:
-        product *= int(i)
+for i in data_int[:int(data_len/2)]:
+    if i < 0:
+        product *= i
 
 string = f"""Исходные данные: {data}
 Количество элементов: {data_len}
