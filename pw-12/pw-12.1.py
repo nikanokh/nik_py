@@ -11,9 +11,12 @@ import random
 a = [random.randint(-100, 100) for i in range(20)]
 print(a)
 
-b, c = a[:int(len(a) / 2)], a[int(len(a) / 2):]
-bc = [b[i] * c[i] for i in range(0, len(b))]
+b, c = a[:len(a) // 2], a[len(a) // 2:]
+# bc = [b[i] * c[i] for i in range(0, len(b))]
+bc = list(map(lambda x, y: x * y, b, c))
 print(bc)
 
 mean = sum(bc) / len(bc)
 print(mean)
+
+l = [list]
